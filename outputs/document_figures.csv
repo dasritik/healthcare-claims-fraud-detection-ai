@@ -1,0 +1,99 @@
+﻿document_id,source_file,source_path,page_number,figure_index,asset_type,asset_path,image_width,image_height,caption_or_context
+b3131709cc8a7580,02_Healthcare_Claims_Rulebook(1).pdf,rulebook/02_Healthcare_Claims_Rulebook(1).pdf,1,,page_render,extracted_assets/figures/b3131709cc8a7580_p1_render.png,893,1263,"Healthcare Claims Fraud Detection POC | Synthetic demonstration
+Page 1
+Healthcare Claims Fraud Detection
+Synthetic Business Rulebook — Version 1.0
+Illustrative POC rules only; not official payer, medical coding, legal or regulatory guidance.
+1. Scope and interpretation
+The rules below are intended to create explainable investigation signals in synthetic data. They do not establish fraud. A claim may
+trigger a rule for legitimate reasons, and an unflagged claim is not guaranteed to be valid.
+2. R"
+b3131709cc8a7580,02_Healthcare_Claims_Rulebook(1).pdf,rulebook/02_Healthcare_Claims_Rulebook(1).pdf,2,0.0,embedded_image,extracted_assets/figures/b3131709cc8a7580_p2_img0.png,1120,576,"Healthcare Claims Fraud Detection POC | Synthetic demonstration
+Page 2
+3. Synthetic data profile
+The bundled dataset contains 50,000 claims, with 1,500 claims carrying a synthetic anomaly label (3.0%). The labels are created by
+design for controlled evaluation and are not real-world fraud outcomes.
+Injected scenario distribution
+Billed amount distribution"
+b3131709cc8a7580,02_Healthcare_Claims_Rulebook(1).pdf,rulebook/02_Healthcare_Claims_Rulebook(1).pdf,2,1.0,embedded_image,extracted_assets/figures/b3131709cc8a7580_p2_img1.png,1120,576,"Healthcare Claims Fraud Detection POC | Synthetic demonstration
+Page 2
+3. Synthetic data profile
+The bundled dataset contains 50,000 claims, with 1,500 claims carrying a synthetic anomaly label (3.0%). The labels are created by
+design for controlled evaluation and are not real-world fraud outcomes.
+Injected scenario distribution
+Billed amount distribution"
+b3131709cc8a7580,02_Healthcare_Claims_Rulebook(1).pdf,rulebook/02_Healthcare_Claims_Rulebook(1).pdf,2,,page_render,extracted_assets/figures/b3131709cc8a7580_p2_render.png,893,1263,"Healthcare Claims Fraud Detection POC | Synthetic demonstration
+Page 2
+3. Synthetic data profile
+The bundled dataset contains 50,000 claims, with 1,500 claims carrying a synthetic anomaly label (3.0%). The labels are created by
+design for controlled evaluation and are not real-world fraud outcomes.
+Injected scenario distribution
+Billed amount distribution"
+b3131709cc8a7580,02_Healthcare_Claims_Rulebook(1).pdf,rulebook/02_Healthcare_Claims_Rulebook(1).pdf,3,,page_render,extracted_assets/figures/b3131709cc8a7580_p3_render.png,893,1263,"Healthcare Claims Fraud Detection POC | Synthetic demonstration
+Page 3
+4. Rule implementation notes
+HC-DUP-001 — Duplicate candidates
+Use a composite key from member_id, provider_id, service_date, procedure_code and units. Amount and submission date help
+distinguish exact from near duplicates. Duplicate status should remain a candidate until reviewed.
+HC-AMT-001 — Billing amount deviation
+Compare billed_amount against procedure reference_amount and peer-group statistics. Robust measures such as "
+b68a983baa2f4894,03_Synthetic_Data_Dictionary.pdf,rulebook/03_Synthetic_Data_Dictionary.pdf,1,,page_render,extracted_assets/figures/b68a983baa2f4894_p1_render.png,893,1263,"Healthcare Claims Fraud Detection POC | Synthetic demonstration
+Page 1
+Synthetic Data Dictionary
+Healthcare Insurance Claims Fraud Detection POC
+All entities and values are fictional and generated for testing.
+claims.csv
+Field
+Type
+Description
+claim_id
+string
+Unique synthetic claim identifier
+member_id
+string
+Synthetic member foreign key
+provider_id
+string
+Synthetic provider foreign key
+service_date
+date
+Date service was provided
+submission_date
+date
+Date claim was submitted
+procedure_code
+strin"
+b68a983baa2f4894,03_Synthetic_Data_Dictionary.pdf,rulebook/03_Synthetic_Data_Dictionary.pdf,2,,page_render,extracted_assets/figures/b68a983baa2f4894_p2_render.png,893,1263,"Healthcare Claims Fraud Detection POC | Synthetic demonstration
+Page 2
+Field
+Type
+Description
+maximum_units_guideline
+integer
+Synthetic test guideline
+claim_line_items.csv
+Field
+Type
+Description
+claim_id
+string
+Claim foreign key
+line_number
+integer
+Line sequence within claim
+line_procedure_code
+string
+Procedure code on line
+line_units
+integer
+Units on line
+line_billed_amount
+float
+Line billed amount
+line_allowed_amount
+float
+Line allowed amount
+line_paid_amount
+float
+Line paid amount
+synthetic_l"

@@ -1,0 +1,426 @@
+﻿document_id,source_file,source_path,file_type,page_number,chunk_index,chunk_id,text,character_count
+90948a9a12ca6655,fraud_investigation_playbook.pdf,investigation/fraud_investigation_playbook.pdf,pdf,1,0,90948a9a12ca6655_p1_c0,"Synthetic Fraud Investigation Playbook
+Review workflow for rule and ML anomaly signals
+Important: This is a fictional synthetic POC document. It is not official payer policy, medical coding advice, legal guidance, or
+regulatory guidance.
+1. Purpose
+A rule or model flag is an investigation signal, not proof of fraud. Reviewers should assess supporting evidence and legitimate
+explanations.
+2. Rule categories
+HC-DUP-001: compare member, provider, service date, procedure, units, amount and submission timing.
+HC-AMT-001: compare billed amount with procedure reference amounts and peer distributions.
+HC-UNIT-001: compare units with synthetic procedure guidelines.
+HC-PRV-001: compare provider aggregates with similar specialty/region peers.
+HC-TIME-001: calculate submission lag and consider operational explanations.
+HC-ML-001: review Isolation Forest anomaly scores with feature context.
+3. Review bands
+Use the existing Rulebook's initial bands: 70–100 high, 40–69 medium, 0–39 low. These are initial POC assumptions and
+should be calibrated using controlled tests.
+4. Label separation",1089
+90948a9a12ca6655,fraud_investigation_playbook.pdf,investigation/fraud_investigation_playbook.pdf,pdf,1,1,90948a9a12ca6655_p1_c1,".
+3. Review bands
+Use the existing Rulebook's initial bands: 70–100 high, 40–69 medium, 0–39 low. These are initial POC assumptions and
+should be calibrated using controlled tests.
+4. Label separation
+Do not use synthetic_anomaly_label or synthetic_scenario as model input or during scoring. Join labels only after predictions
+are produced for evaluation.
+5. Outcomes
+Record a reviewer outcome, reason, evidence reviewed and follow-up. Do not automatically deny or label a claim as fraudulent
+solely because a rule or anomaly model flagged it.
+Version 1.0 | Healthcare Claims Fraud Detection POC | Synthetic demonstration",621
+7ddaecb4ab43bf96,claims_processing_sop.pdf,operations/claims_processing_sop.pdf,pdf,1,0,7ddaecb4ab43bf96_p1_c0,"Synthetic Claims Processing Standard Operating
+Procedure
+Illustrative end-to-end claim processing workflow
+Important: This is a fictional synthetic POC document. It is not official payer policy, medical coding advice, legal guidance, or
+regulatory guidance.
+1. Intake
+Register a unique claim_id and record member, provider, service date, submission date, procedure, units, billed amount and
+status. Validate required fields and foreign-key relationships.
+2. Validation and adjudication
+Check coverage dates, procedure references, network information and required documentation. Store the synthetic decision
+and reason codes as explicit records.
+3. Payment and settlement
+Record approval and payment events separately. Payment history should include a payment identifier, claim identifier,
+payment date, amount and status. Avoid inferring settlement dates from the current claim status.
+4. Resubmission and audit trail
+Represent status changes as timestamped events. Retain earlier events rather than overwriting them. All generated event
+histories are illustrative synthetic records.
+5. Analytics definitions",1108
+7ddaecb4ab43bf96,claims_processing_sop.pdf,operations/claims_processing_sop.pdf,pdf,1,1,7ddaecb4ab43bf96_p1_c1,"dit trail
+Represent status changes as timestamped events. Retain earlier events rather than overwriting them. All generated event
+histories are illustrative synthetic records.
+5. Analytics definitions
+Claims raised should be counted by submission date. Settled claims should be counted by payment settlement date or an
+explicit settlement event. Document the chosen metric definition in each chart or SQL answer.
+Version 1.0 | Healthcare Claims Fraud Detection POC | Synthetic demonstration",490
+9f254fe55ffdc202,claims_adjudication_policy.pdf,policy/claims_adjudication_policy.pdf,pdf,1,0,9f254fe55ffdc202_p1_c0,"Synthetic Claims Adjudication Policy
+Illustrative rules for claim processing in the Healthcare Claims AI POC
+Important: This is a fictional synthetic POC document. It is not official payer policy, medical coding advice, legal guidance, or
+regulatory guidance.
+1. Purpose and scope
+This document defines a simplified synthetic workflow for validating eligibility, plan coverage, provider network status,
+procedure information, authorization and documentation. It exists to test software behavior, not to represent any real insurer.
+2. Illustrative adjudication checks
+Eligibility: compare service_date with coverage_start_date and coverage_end_date.
+Procedure and benefit: compare procedure_code, units and billed amount with the synthetic procedure reference and plan
+assumptions.
+Network: consider the provider network status and the synthetic plan type.
+Documentation and authorization: missing evidence may result in a pending status or a synthetic denial reason.
+3. Status definitions
+Paid: synthetic record indicates payment completed.
+Pending: more information or review is required.
+Denied: synthetic adjudication rejected the claim under one or more configured test reasons.",1182
+9f254fe55ffdc202,claims_adjudication_policy.pdf,policy/claims_adjudication_policy.pdf,pdf,1,1,9f254fe55ffdc202_p1_c1,"itions
+Paid: synthetic record indicates payment completed.
+Pending: more information or review is required.
+Denied: synthetic adjudication rejected the claim under one or more configured test reasons.
+Partially Paid: the synthetic allowed or paid amount is less than the billed amount.
+4. Decision safeguards
+A denial reason in the generated dataset is synthetic and illustrative. The assistant must quote the stored reason and identify it
+as synthetic. Do not infer a reason from claim status alone when no reason record exists.
+Fraud signals must not automatically determine claim adjudication. Route unusual patterns for human review.
+Version 1.0 | Healthcare Claims Fraud Detection POC | Synthetic demonstration",715
+23a94ea91fc0cddf,coverage_and_exclusions.pdf,policy/coverage_and_exclusions.pdf,pdf,1,0,23a94ea91fc0cddf_p1_c0,"Synthetic Coverage and Exclusions Guide
+Illustrative coverage concepts used for retrieval and question answering
+Important: This is a fictional synthetic POC document. It is not official payer policy, medical coding advice, legal guidance, or
+regulatory guidance.
+1. Coverage period
+A service is within the synthetic coverage period when its service date falls on or after coverage_start_date and on or before
+coverage_end_date, where an end date is present.
+2. Network status
+Out-of-network status may affect synthetic benefit handling, but it should not be treated as an automatic denial unless the
+configured plan rule says so.
+3. Procedure limits
+Use procedures.csv reference_amount and maximum_units_guideline as test fixtures only. They are not real fee schedules or
+medical coding standards.
+4. Exclusions and uncertainty
+If the synthetic policy does not specify a rule, the assistant should say the policy does not provide enough information and
+avoid inventing a coverage determination.
+Version 1.0 | Healthcare Claims Fraud Detection POC | Synthetic demonstration",1073
+2fce89c81c5b30f4,denial_reason_catalog.pdf,policy/denial_reason_catalog.pdf,pdf,1,0,2fce89c81c5b30f4_p1_c0,"Synthetic Denial Reason Catalogue
+Reference catalogue for synthetic claim denial explanations
+Important: This is a fictional synthetic POC document. It is not official payer policy, medical coding advice, legal guidance, or
+regulatory guidance.
+1. Reason codes
+DEN-COV-001 — Coverage inactive on service date: Member coverage dates do not include the service date.
+Recommended next step: Verify eligibility and coverage dates; route disputes to the eligibility team.
+DEN-AUTH-002 — Prior authorization missing: A required synthetic authorization reference was not present at adjudication.
+Recommended next step: Check authorization records and request supporting documentation if applicable.
+DEN-CODE-003 — Procedure/diagnosis mismatch: The synthetic procedure and diagnosis combination did not meet
+configured policy rules. Recommended next step: Review coding and supporting clinical documentation.
+DEN-DUP-004 — Potential duplicate claim: A matching member, provider, service date, procedure and unit combination was
+identified. Recommended next step: Compare original and subsequent submissions before deciding.",1115
+2fce89c81c5b30f4,denial_reason_catalog.pdf,policy/denial_reason_catalog.pdf,pdf,1,1,2fce89c81c5b30f4_p1_c1,"Potential duplicate claim: A matching member, provider, service date, procedure and unit combination was
+identified. Recommended next step: Compare original and subsequent submissions before deciding.
+DEN-NET-005 — Out-of-network restriction: The synthetic plan applies a restriction to this out-of-network service.
+Recommended next step: Review plan terms and any applicable out-of-network benefits.
+DEN-DOC-006 — Required documentation missing: One or more required synthetic claim documents were not recorded.
+Recommended next step: Request missing documentation and reassess under the synthetic workflow.
+DEN-LIMIT-007 — Benefit or unit limit exceeded: The submitted units or service amount exceeded a configured synthetic
+benefit limit. Recommended next step: Check benefit limits and procedure guidelines.
+2. Assistant response requirements
+For a claim-specific question, retrieve the claim and its denial reason record. State the reason code, plain-language
+description, supporting data fields where available, and suggested next step.
+Clearly distinguish stored synthetic reasons from a validated real-world adjudication. If a claim has no denial reason, report that
+no reason is recorded.",1197
+2fce89c81c5b30f4,denial_reason_catalog.pdf,policy/denial_reason_catalog.pdf,pdf,1,2,2fce89c81c5b30f4_p1_c2,"lds where available, and suggested next step.
+Clearly distinguish stored synthetic reasons from a validated real-world adjudication. If a claim has no denial reason, report that
+no reason is recorded.
+Version 1.0 | Healthcare Claims Fraud Detection POC | Synthetic demonstration",278
+b3131709cc8a7580,02_Healthcare_Claims_Rulebook(1).pdf,rulebook/02_Healthcare_Claims_Rulebook(1).pdf,pdf,1,0,b3131709cc8a7580_p1_c0,"Healthcare Claims Fraud Detection POC | Synthetic demonstration
+Page 1
+Healthcare Claims Fraud Detection
+Synthetic Business Rulebook — Version 1.0
+Illustrative POC rules only; not official payer, medical coding, legal or regulatory guidance.
+1. Scope and interpretation
+The rules below are intended to create explainable investigation signals in synthetic data. They do not establish fraud. A claim may
+trigger a rule for legitimate reasons, and an unflagged claim is not guaranteed to be valid.
+2. Rule catalogue
+Rule ID
+Rule
+Illustrative condition
+Severity
+Evidence surfaced
+HC-DUP-001
+Exact/near duplicate
+Same member, provider, service date, procedure and
+units; compare amount and submission timing.
+High
+Matching claim IDs and
+matching fields
+HC-AMT-001
+Unusual billed amount
+Billed amount materially above a procedure reference
+amount or specialty peer distribution.
+Medium/High
+Amount ratio, peer
+percentile, reference
+amount
+HC-UNIT-001
+High units
+Units exceed the synthetic procedure guideline or are
+extreme versus comparable claims.
+Medium/High
+Units, guideline and claim
+amount
+HC-PRV-001
+Provider billing outlier
+Provider aggregate amount or frequency deviates from",1179
+b3131709cc8a7580,02_Healthcare_Claims_Rulebook(1).pdf,rulebook/02_Healthcare_Claims_Rulebook(1).pdf,pdf,1,1,b3131709cc8a7580_p1_c1,"etic procedure guideline or are
+extreme versus comparable claims.
+Medium/High
+Units, guideline and claim
+amount
+HC-PRV-001
+Provider billing outlier
+Provider aggregate amount or frequency deviates from
+specialty/region peers.
+Medium/High
+Provider metrics and peer
+baseline
+HC-TIME-001
+Submission timing
+anomaly
+Submission occurs unusually long after service date
+relative to configured POC window.
+Low/Medium
+Service date, submission
+date and lag days
+HC-ML-001
+Multivariate anomaly
+Isolation Forest identifies an unusual combination of
+claim features.
+Review signal
+Anomaly score and
+contributing feature context",612
+b3131709cc8a7580,02_Healthcare_Claims_Rulebook(1).pdf,rulebook/02_Healthcare_Claims_Rulebook(1).pdf,pdf,2,0,b3131709cc8a7580_p2_c0,"Healthcare Claims Fraud Detection POC | Synthetic demonstration
+Page 2
+3. Synthetic data profile
+The bundled dataset contains 50,000 claims, with 1,500 claims carrying a synthetic anomaly label (3.0%). The labels are created by
+design for controlled evaluation and are not real-world fraud outcomes.
+Injected scenario distribution
+Billed amount distribution",357
+b3131709cc8a7580,02_Healthcare_Claims_Rulebook(1).pdf,rulebook/02_Healthcare_Claims_Rulebook(1).pdf,pdf,3,0,b3131709cc8a7580_p3_c0,"Healthcare Claims Fraud Detection POC | Synthetic demonstration
+Page 3
+4. Rule implementation notes
+HC-DUP-001 — Duplicate candidates
+Use a composite key from member_id, provider_id, service_date, procedure_code and units. Amount and submission date help
+distinguish exact from near duplicates. Duplicate status should remain a candidate until reviewed.
+HC-AMT-001 — Billing amount deviation
+Compare billed_amount against procedure reference_amount and peer-group statistics. Robust measures such as median and median
+absolute deviation can reduce sensitivity to extreme values. Configure thresholds in a YAML file rather than hard-coding them.
+HC-UNIT-001 — High units
+Compare units against maximum_units_guideline in procedures.csv. The guideline is synthetic and should be treated as a test fixture
+only.
+HC-PRV-001 — Provider outlier
+Aggregate claim count, median billed amount and high-amount share by provider. Compare providers within a similar specialty/region
+peer group and require a minimum sample size.
+HC-TIME-001 — Submission timing
+Calculate submission_lag_days = submission_date - service_date. Long delays may have legitimate operational explanations and",1171
+b3131709cc8a7580,02_Healthcare_Claims_Rulebook(1).pdf,rulebook/02_Healthcare_Claims_Rulebook(1).pdf,pdf,3,1,b3131709cc8a7580_p3_c1,"er group and require a minimum sample size.
+HC-TIME-001 — Submission timing
+Calculate submission_lag_days = submission_date - service_date. Long delays may have legitimate operational explanations and
+should not independently imply fraud.
+HC-ML-001 — Unsupervised anomaly
+Fit Isolation Forest only on claim-derived features. Exclude claim_id, synthetic_anomaly_label and synthetic_scenario from model
+inputs. Review model scores alongside rule evidence.
+5. Risk score and review bands
+Initial score weights are: duplicate 25%, amount deviation 20%, upcoding-like indicators 15%, provider peer outlier 15%, frequency
+10%, and Isolation Forest signal 15%. These weights are POC assumptions and should be calibrated using held-out synthetic scenarios
+and reviewer workload.
+Score
+Display band
+Suggested handling
+70–100
+High
+Prioritize for human review; inspect rule evidence and similar claims.
+40–69
+Medium
+Review when capacity permits or when additional evidence exists.
+0–39
+Low
+Lower priority; continue normal controls and sample monitoring.
+6. Label separation and evaluation",1077
+b3131709cc8a7580,02_Healthcare_Claims_Rulebook(1).pdf,rulebook/02_Healthcare_Claims_Rulebook(1).pdf,pdf,3,2,b3131709cc8a7580_p3_c2,"imilar claims.
+40–69
+Medium
+Review when capacity permits or when additional evidence exists.
+0–39
+Low
+Lower priority; continue normal controls and sample monitoring.
+6. Label separation and evaluation
+The synthetic ground-truth label table is stored separately in synthetic_labels.csv. The detection pipeline must score claims
+without access to these columns. Only after predictions are generated may the labels be joined for evaluation. Report precision,
+recall, F1, PR-AUC where applicable, false-positive counts, scenario-level detection and review volume. Do not describe
+synthetic-label performance as real-world performance.
+7. Review workflow
+1. Open the claim and confirm the member/provider/service attributes. 2. Inspect the triggered rules and comparison baseline. 3. Check
+duplicate candidates and provider peer metrics. 4. Record a reviewer outcome and reason code. 5. Track false positives and update
+rule thresholds through documented change control.",965
+b68a983baa2f4894,03_Synthetic_Data_Dictionary.pdf,rulebook/03_Synthetic_Data_Dictionary.pdf,pdf,1,0,b68a983baa2f4894_p1_c0,"Healthcare Claims Fraud Detection POC | Synthetic demonstration
+Page 1
+Synthetic Data Dictionary
+Healthcare Insurance Claims Fraud Detection POC
+All entities and values are fictional and generated for testing.
+claims.csv
+Field
+Type
+Description
+claim_id
+string
+Unique synthetic claim identifier
+member_id
+string
+Synthetic member foreign key
+provider_id
+string
+Synthetic provider foreign key
+service_date
+date
+Date service was provided
+submission_date
+date
+Date claim was submitted
+procedure_code
+string
+Synthetic procedure code foreign key
+diagnosis_code
+string
+Synthetic diagnosis category code
+units
+integer
+Number of units billed
+billed_amount
+float
+Synthetic amount billed
+allowed_amount
+float
+Synthetic allowed amount
+paid_amount
+float
+Synthetic paid amount
+claim_status
+category
+Paid, Pending, Denied or Partially Paid
+members.csv
+Field
+Type
+Description
+member_id
+string
+Unique synthetic member identifier
+age_band
+category
+Synthetic age band
+plan_type
+category
+Synthetic plan type
+region
+category
+Synthetic region
+coverage_start_date
+date
+Synthetic coverage start
+coverage_end_date
+date
+Synthetic coverage end
+providers.csv
+Field
+Type
+Description
+provider_id
+string",1171
+b68a983baa2f4894,03_Synthetic_Data_Dictionary.pdf,rulebook/03_Synthetic_Data_Dictionary.pdf,pdf,1,1,b68a983baa2f4894_p1_c1,"hetic plan type
+region
+category
+Synthetic region
+coverage_start_date
+date
+Synthetic coverage start
+coverage_end_date
+date
+Synthetic coverage end
+providers.csv
+Field
+Type
+Description
+provider_id
+string
+Unique synthetic provider identifier
+specialty
+category
+Synthetic provider specialty
+region
+category
+Synthetic region
+provider_type
+category
+Synthetic provider type
+network_status
+category
+In-Network or Out-of-Network
+provider_start_date
+date
+Synthetic provider start date
+procedures.csv
+Field
+Type
+Description
+procedure_code
+string
+Unique synthetic procedure identifier
+description
+string
+Illustrative procedure description
+typical_specialty
+category
+Synthetic specialty grouping
+reference_amount
+float
+Synthetic reference amount; not a real fee schedule",756
+b68a983baa2f4894,03_Synthetic_Data_Dictionary.pdf,rulebook/03_Synthetic_Data_Dictionary.pdf,pdf,2,0,b68a983baa2f4894_p2_c0,"Healthcare Claims Fraud Detection POC | Synthetic demonstration
+Page 2
+Field
+Type
+Description
+maximum_units_guideline
+integer
+Synthetic test guideline
+claim_line_items.csv
+Field
+Type
+Description
+claim_id
+string
+Claim foreign key
+line_number
+integer
+Line sequence within claim
+line_procedure_code
+string
+Procedure code on line
+line_units
+integer
+Units on line
+line_billed_amount
+float
+Line billed amount
+line_allowed_amount
+float
+Line allowed amount
+line_paid_amount
+float
+Line paid amount
+synthetic_labels.csv
+Field
+Type
+Description
+claim_id
+string
+Claim foreign key
+synthetic_anomaly_label
+integer
+1 for injected synthetic anomaly; 0 otherwise
+synthetic_scenario
+category
+Scenario used for injection; NONE for other claims",723

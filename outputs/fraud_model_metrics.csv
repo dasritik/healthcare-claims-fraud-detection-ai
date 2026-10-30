@@ -1,0 +1,4 @@
+model,true_positives,false_positives,true_negatives,false_negatives,precision,recall,f1_score,accuracy
+Rule + ML combined review queue,1012,3722,54478,788,0.2138,0.5622,0.3098,0.9248
+Isolation Forest only,402,1398,56802,1398,0.2233,0.2233,0.2233,0.9534
+Rule-based flags only,1489,22143,36057,311,0.063,0.8272,0.1171,0.6258

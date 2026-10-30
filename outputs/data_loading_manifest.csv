@@ -1,0 +1,11 @@
+dataset,file_path,status,rows,columns,error
+claims,data\healthcare_claims_ai_generated\processed\claims_extended.csv,LOADED,60000,12,
+claim_line_items,data\healthcare_claims_ai_generated\processed\claim_line_items_extended.csv,LOADED,60800,7,
+members,data\healthcare_claims_ai_generated\processed\members.csv,LOADED,5000,6,
+providers,data\healthcare_claims_ai_generated\processed\providers.csv,LOADED,300,6,
+procedures,data\healthcare_claims_ai_generated\processed\procedures.csv,LOADED,100,5,
+synthetic_labels,data\healthcare_claims_ai_generated\processed\synthetic_labels_extended.csv,LOADED,60000,3,
+claim_denial_reasons,data\healthcare_claims_ai_generated\processed\claim_denial_reasons.csv,LOADED,60000,6,
+denial_reason_catalog,data\healthcare_claims_ai_generated\processed\denial_reason_catalog.csv,LOADED,7,4,
+claim_status_history,data\healthcare_claims_ai_generated\processed\claim_status_history.csv,LOADED,161009,6,
+claim_payments,data\healthcare_claims_ai_generated\processed\claim_payments.csv,LOADED,59079,5,

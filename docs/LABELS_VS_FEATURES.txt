@@ -1,0 +1,3 @@
+The detector input dataset is claims.csv plus derived features and reference tables.
+synthetic_labels.csv MUST NOT be joined into the feature matrix for training or scoring.
+Use labels only after scoring to evaluate the detector against the injected synthetic scenarios.

@@ -1,0 +1,23 @@
+{
+  "seed": 20261029,
+  "claims_rows": 50000,
+  "members_rows": 5000,
+  "providers_rows": 300,
+  "procedures_rows": 100,
+  "claim_line_items_rows": 50000,
+  "labels_rows": 50000,
+  "labeled_anomalies": 1500,
+  "anomaly_rate": 0.03,
+  "claim_ids_unique": true,
+  "claim_label_ids_match": true,
+  "label_columns_absent_from_claims": true,
+  "missing_claim_values": {},
+  "scenario_counts": {
+    "NONE": 48500,
+    "DUPLICATE_SUBMISSION": 300,
+    "PROVIDER_BILLING_OUTLIER": 300,
+    "UNUSUAL_BILLING_AMOUNT": 300,
+    "HIGH_UNITS_FREQUENCY": 300,
+    "SUBMISSION_TIMING_ANOMALY": 300
+  }
+}

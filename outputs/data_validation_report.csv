@@ -1,0 +1,66 @@
+dataset,check,status,details
+claims,row_count,PASS,"60,000 rows"
+claims,column_count,PASS,12 columns
+claims,fully_empty_columns,PASS,No fully empty columns
+claims,missing_cells,PASS,0 missing cells across all columns
+claims,duplicate_rows,PASS,0 fully duplicated rows
+claims,claim_identifier_duplicates,PASS,"Column 'claim_id': 0 duplicate IDs among 60,000 non-null values"
+claims,member_identifier_duplicates,INFO,"Column 'member_id': 55,000 repeated values; may be valid for detail/history tables"
+claims,provider_identifier_duplicates,INFO,"Column 'provider_id': 59,700 repeated values; may be valid for detail/history tables"
+claims,procedure_identifier_duplicates,INFO,"Column 'procedure_code': 59,900 repeated values; may be valid for detail/history tables"
+claim_line_items,row_count,PASS,"60,800 rows"
+claim_line_items,column_count,PASS,7 columns
+claim_line_items,fully_empty_columns,PASS,No fully empty columns
+claim_line_items,missing_cells,PASS,0 missing cells across all columns
+claim_line_items,duplicate_rows,PASS,0 fully duplicated rows
+claim_line_items,claim_identifier_duplicates,INFO,Column 'claim_id': 800 repeated values; may be valid for detail/history tables
+members,row_count,PASS,"5,000 rows"
+members,column_count,PASS,6 columns
+members,fully_empty_columns,PASS,No fully empty columns
+members,missing_cells,PASS,0 missing cells across all columns
+members,duplicate_rows,PASS,0 fully duplicated rows
+members,member_identifier_duplicates,PASS,"Column 'member_id': 0 duplicate IDs among 5,000 non-null values"
+providers,row_count,PASS,300 rows
+providers,column_count,PASS,6 columns
+providers,fully_empty_columns,PASS,No fully empty columns
+providers,missing_cells,PASS,0 missing cells across all columns
+providers,duplicate_rows,PASS,0 fully duplicated rows
+providers,provider_identifier_duplicates,PASS,Column 'provider_id': 0 duplicate IDs among 300 non-null values
+procedures,row_count,PASS,100 rows
+procedures,column_count,PASS,5 columns
+procedures,fully_empty_columns,PASS,No fully empty columns
+procedures,missing_cells,PASS,0 missing cells across all columns
+procedures,duplicate_rows,PASS,0 fully duplicated rows
+procedures,procedure_identifier_duplicates,PASS,Column 'procedure_code': 0 duplicate IDs among 100 non-null values
+synthetic_labels,row_count,PASS,"60,000 rows"
+synthetic_labels,column_count,PASS,3 columns
+synthetic_labels,fully_empty_columns,PASS,No fully empty columns
+synthetic_labels,missing_cells,PASS,0 missing cells across all columns
+synthetic_labels,duplicate_rows,PASS,0 fully duplicated rows
+synthetic_labels,claim_identifier_duplicates,INFO,Column 'claim_id': 0 repeated values; may be valid for detail/history tables
+claim_denial_reasons,row_count,PASS,"60,000 rows"
+claim_denial_reasons,column_count,PASS,6 columns
+claim_denial_reasons,fully_empty_columns,PASS,No fully empty columns
+claim_denial_reasons,missing_cells,WARNING,"192,740 missing cells across all columns"
+claim_denial_reasons,duplicate_rows,PASS,0 fully duplicated rows
+claim_denial_reasons,claim_identifier_duplicates,INFO,Column 'claim_id': 0 repeated values; may be valid for detail/history tables
+denial_reason_catalog,row_count,PASS,7 rows
+denial_reason_catalog,column_count,PASS,4 columns
+denial_reason_catalog,fully_empty_columns,PASS,No fully empty columns
+denial_reason_catalog,missing_cells,PASS,0 missing cells across all columns
+denial_reason_catalog,duplicate_rows,PASS,0 fully duplicated rows
+claim_status_history,row_count,PASS,"161,009 rows"
+claim_status_history,column_count,PASS,6 columns
+claim_status_history,fully_empty_columns,PASS,No fully empty columns
+claim_status_history,missing_cells,PASS,0 missing cells across all columns
+claim_status_history,duplicate_rows,PASS,0 fully duplicated rows
+claim_status_history,claim_identifier_duplicates,INFO,"Column 'claim_id': 101,009 repeated values; may be valid for detail/history tables"
+claim_payments,row_count,PASS,"59,079 rows"
+claim_payments,column_count,PASS,5 columns
+claim_payments,fully_empty_columns,PASS,No fully empty columns
+claim_payments,missing_cells,PASS,0 missing cells across all columns
+claim_payments,duplicate_rows,PASS,0 fully duplicated rows
+claim_payments,claim_identifier_duplicates,INFO,Column 'claim_id': 0 repeated values; may be valid for detail/history tables
+claim_line_items,claim_reference_integrity,PASS,0 line-item rows reference claim IDs not found in claims
+claims,member_reference_integrity,PASS,0 claims reference member IDs not found in members
+claims,provider_reference_integrity,PASS,0 claims reference provider IDs not found in providers

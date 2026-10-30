@@ -1,0 +1,101 @@
+procedure_code,description,typical_specialty,reference_amount,maximum_units_guideline
+PROC0001,Office visit - low complexity,Cardiology,116.45,3
+PROC0002,Office visit - moderate complexity,Dermatology,51.08,4
+PROC0003,Office visit - high complexity,Emergency Medicine,132.23,8
+PROC0004,Basic laboratory panel,Cardiology,303.1,6
+PROC0005,Advanced laboratory panel,Dermatology,145.39,2
+PROC0006,Diagnostic imaging - basic,Primary Care,62.14,8
+PROC0007,Diagnostic imaging - advanced,Cardiology,165.71,2
+PROC0008,Physical therapy session,Orthopedics,191.79,1
+PROC0009,Specialist consultation,Physical Therapy,139.11,3
+PROC0010,Emergency evaluation,Physical Therapy,342.61,3
+PROC0011,Minor procedure,Orthopedics,1268.35,6
+PROC0012,Major procedure,Dermatology,121.57,6
+PROC0013,Follow-up visit,Emergency Medicine,275.48,8
+PROC0014,Preventive screening,Neurology,319.01,3
+PROC0015,Cardiac diagnostic test,Dermatology,72.0,8
+PROC0016,Neurological diagnostic test,Physical Therapy,111.96,3
+PROC0017,Dermatology procedure,Orthopedics,658.83,3
+PROC0018,Orthopedic evaluation,Physical Therapy,95.62,8
+PROC0019,Medication management,Orthopedics,226.94,3
+PROC0020,Rehabilitation service,Emergency Medicine,1127.77,1
+PROC0021,Office visit - low complexity,Physical Therapy,1480.95,2
+PROC0022,Office visit - moderate complexity,Cardiology,544.91,6
+PROC0023,Office visit - high complexity,Emergency Medicine,1190.81,6
+PROC0024,Basic laboratory panel,Dermatology,121.32,1
+PROC0025,Advanced laboratory panel,Radiology,124.43,6
+PROC0026,Diagnostic imaging - basic,Dermatology,970.82,3
+PROC0027,Diagnostic imaging - advanced,Neurology,234.88,2
+PROC0028,Physical therapy session,Radiology,472.22,2
+PROC0029,Specialist consultation,Physical Therapy,102.54,6
+PROC0030,Emergency evaluation,Radiology,1565.78,2
+PROC0031,Minor procedure,Physical Therapy,223.42,6
+PROC0032,Major procedure,Physical Therapy,1582.47,8
+PROC0033,Follow-up visit,Emergency Medicine,51.4,4
+PROC0034,Preventive screening,Dermatology,751.85,1
+PROC0035,Cardiac diagnostic test,Orthopedics,89.25,1
+PROC0036,Neurological diagnostic test,Radiology,1099.47,2
+PROC0037,Dermatology procedure,Primary Care,55.84,3
+PROC0038,Orthopedic evaluation,Emergency Medicine,89.31,6
+PROC0039,Medication management,Cardiology,1455.21,8
+PROC0040,Rehabilitation service,Primary Care,665.2,8
+PROC0041,Office visit - low complexity,Primary Care,139.74,2
+PROC0042,Office visit - moderate complexity,Physical Therapy,459.48,6
+PROC0043,Office visit - high complexity,Radiology,789.59,8
+PROC0044,Basic laboratory panel,Orthopedics,311.7,8
+PROC0045,Advanced laboratory panel,Primary Care,255.35,8
+PROC0046,Diagnostic imaging - basic,Cardiology,1178.13,1
+PROC0047,Diagnostic imaging - advanced,Orthopedics,58.08,8
+PROC0048,Physical therapy session,Emergency Medicine,63.04,4
+PROC0049,Specialist consultation,Radiology,398.54,1
+PROC0050,Emergency evaluation,Physical Therapy,53.93,8
+PROC0051,Minor procedure,Radiology,1686.99,6
+PROC0052,Major procedure,Primary Care,467.67,4
+PROC0053,Follow-up visit,Cardiology,52.03,8
+PROC0054,Preventive screening,Emergency Medicine,1286.22,2
+PROC0055,Cardiac diagnostic test,Neurology,132.3,8
+PROC0056,Neurological diagnostic test,Radiology,539.69,4
+PROC0057,Dermatology procedure,Emergency Medicine,508.96,1
+PROC0058,Orthopedic evaluation,Primary Care,62.45,4
+PROC0059,Medication management,Neurology,81.89,3
+PROC0060,Rehabilitation service,Emergency Medicine,739.06,4
+PROC0061,Office visit - low complexity,Primary Care,973.58,4
+PROC0062,Office visit - moderate complexity,Cardiology,58.91,2
+PROC0063,Office visit - high complexity,Physical Therapy,147.51,3
+PROC0064,Basic laboratory panel,Orthopedics,84.44,3
+PROC0065,Advanced laboratory panel,Neurology,218.71,3
+PROC0066,Diagnostic imaging - basic,Physical Therapy,929.85,3
+PROC0067,Diagnostic imaging - advanced,Dermatology,298.18,4
+PROC0068,Physical therapy session,Neurology,191.8,6
+PROC0069,Specialist consultation,Emergency Medicine,50.58,1
+PROC0070,Emergency evaluation,Neurology,120.03,1
+PROC0071,Minor procedure,Cardiology,207.63,8
+PROC0072,Major procedure,Orthopedics,459.61,6
+PROC0073,Follow-up visit,Neurology,1094.86,2
+PROC0074,Preventive screening,Cardiology,817.76,2
+PROC0075,Cardiac diagnostic test,Cardiology,312.06,4
+PROC0076,Neurological diagnostic test,Physical Therapy,318.16,1
+PROC0077,Dermatology procedure,Physical Therapy,817.15,1
+PROC0078,Orthopedic evaluation,Dermatology,141.95,8
+PROC0079,Medication management,Cardiology,58.1,1
+PROC0080,Rehabilitation service,Primary Care,88.6,3
+PROC0081,Office visit - low complexity,Cardiology,302.1,6
+PROC0082,Office visit - moderate complexity,Orthopedics,177.82,2
+PROC0083,Office visit - high complexity,Neurology,415.7,1
+PROC0084,Basic laboratory panel,Dermatology,331.55,3
+PROC0085,Advanced laboratory panel,Orthopedics,46.18,1
+PROC0086,Diagnostic imaging - basic,Orthopedics,61.4,8
+PROC0087,Diagnostic imaging - advanced,Physical Therapy,313.07,6
+PROC0088,Physical therapy session,Orthopedics,552.74,8
+PROC0089,Specialist consultation,Neurology,47.91,2
+PROC0090,Emergency evaluation,Orthopedics,176.44,8
+PROC0091,Minor procedure,Dermatology,130.03,6
+PROC0092,Major procedure,Orthopedics,289.71,8
+PROC0093,Follow-up visit,Cardiology,97.28,8
+PROC0094,Preventive screening,Primary Care,1635.31,6
+PROC0095,Cardiac diagnostic test,Dermatology,156.11,6
+PROC0096,Neurological diagnostic test,Dermatology,87.64,8
+PROC0097,Dermatology procedure,Orthopedics,1418.57,8
+PROC0098,Orthopedic evaluation,Physical Therapy,392.64,6
+PROC0099,Medication management,Radiology,213.19,1
+PROC0100,Rehabilitation service,Radiology,45.45,6

@@ -1,0 +1,8 @@
+denial_reason_code,denial_reason,reason_description,recommended_next_step
+DEN-COV-001,Coverage inactive on service date,Member coverage dates do not include the service date.,Verify eligibility and coverage dates; route disputes to the eligibility team.
+DEN-AUTH-002,Prior authorization missing,A required synthetic authorization reference was not present at adjudication.,Check authorization records and request supporting documentation if applicable.
+DEN-CODE-003,Procedure/diagnosis mismatch,The synthetic procedure and diagnosis combination did not meet configured policy rules.,Review coding and supporting clinical documentation.
+DEN-DUP-004,Potential duplicate claim,"A matching member, provider, service date, procedure and unit combination was identified.",Compare original and subsequent submissions before deciding.
+DEN-NET-005,Out-of-network restriction,The synthetic plan applies a restriction to this out-of-network service.,Review plan terms and any applicable out-of-network benefits.
+DEN-DOC-006,Required documentation missing,One or more required synthetic claim documents were not recorded.,Request missing documentation and reassess under the synthetic workflow.
+DEN-LIMIT-007,Benefit or unit limit exceeded,The submitted units or service amount exceeded a configured synthetic benefit limit.,Check benefit limits and procedure guidelines.
